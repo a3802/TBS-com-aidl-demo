@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/textAndImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.tbossgroup.scale.CameraPreview
+            android:id="@+id/textureView"
+            android:layout_width="253dp"
+            android:layout_height="208dp" />
+
+        <TextView
+            android:id="@+id/tvNetWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="100sp"
+            android:textColor="@android:color/black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnDisConn"
+            android:text="@string/str_disconnect"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btnZero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="归零"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btnTare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="扣重"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="配置"
+            android:textSize="30sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TAKE"
+            android:textSize="30sp"
+            android:onClick="takePic"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="打印"
+            android:textSize="30sp"
+            android:onClick="btnLabelPrint"/>
+
+        <TextView
+            android:id="@+id/tv_battery_per"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="88%"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+
+        <com.tbossgroup.scale.BatteryView
+            android:id="@+id/img_battery"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_margin="10dp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
